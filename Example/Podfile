@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ZSYMaskView_Example' do
+  pod 'ZSYMaskView', :path => '../'
+
+  target 'ZSYMaskView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
