@@ -30,6 +30,7 @@ Pod::Spec.new do |s|
 
   s.source_files = 'ZSYMaskView/Classes/**/*'
   
+  s.swift_version = '4' 
   # s.resource_bundles = {
   #   'ZSYMaskView' => ['ZSYMaskView/Assets/*.png']
   # }
