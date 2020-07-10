@@ -19,11 +19,11 @@ Pod::Spec.new do |s|
 
   s.description      = '自定义程度极高的遮罩层，可用于App引导带遮罩效果的设计'
 
-  s.homepage         = 'https://github.com/zhusongyu1990@163.com/ZSYMaskView'
+  s.homepage         = 'https://github.com/zhusongyu/ZSYMaskView'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'zhusongyu1990@163.com' => 'zhusongyu1990@163.com' }
-  s.source           = { :git => 'https://github.com/zhusongyu1990@163.com/ZSYMaskView.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/zhusongyu/ZSYMaskView.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
