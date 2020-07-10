@@ -1,0 +1,6 @@
+framework module ZSYMaskView {
+  umbrella header "ZSYMaskView-umbrella.h"
+
+  export *
+  module * { export * }
+}

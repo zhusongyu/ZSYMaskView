@@ -1,0 +1,6 @@
+framework module Pods_ZSYMaskView_Example {
+  umbrella header "Pods-ZSYMaskView_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

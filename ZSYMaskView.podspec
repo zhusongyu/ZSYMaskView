@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZSYMaskView'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of ZSYMaskView.'
+  s.version          = '0.0.1'
+  s.summary          = '可以自定义的MaskView.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,9 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  s.description      = '自定义程度极高的遮罩层，可用于App引导带遮罩效果的设计'
 
   s.homepage         = 'https://github.com/zhusongyu1990@163.com/ZSYMaskView'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'

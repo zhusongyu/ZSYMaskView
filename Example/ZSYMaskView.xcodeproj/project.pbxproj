@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		2125EC9AA18F6311F4B580D5 /* Pods_ZSYMaskView_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDD162F1CDB8D0489FDD3B07 /* Pods_ZSYMaskView_Tests.framework */; };
+		3B6B517524B719E2009219DF /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6B517424B719E2009219DF /* TestViewController.swift */; };
+		3BA09DED24B71BE2007B7C1C /* Pods_ZSYMaskView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925352F943E9E5CE13581393 /* Pods_ZSYMaskView_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		6C797E7779085DC1C243C939 /* Pods_ZSYMaskView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925352F943E9E5CE13581393 /* Pods_ZSYMaskView_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		180FD65F776FF406102E4906 /* Pods-ZSYMaskView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZSYMaskView_Example.debug.xcconfig"; path = "Target Support Files/Pods-ZSYMaskView_Example/Pods-ZSYMaskView_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		3B6B517424B719E2009219DF /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* ZSYMaskView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZSYMaskView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,11 +41,11 @@
 		607FACE51AFB9204008FA782 /* ZSYMaskView_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZSYMaskView_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		67F336F0DC391687F88AD3D9 /* ZSYMaskView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = ZSYMaskView.podspec; path = ../ZSYMaskView.podspec; sourceTree = "<group>"; };
-		751AC665DF01D18897C838C5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		67F336F0DC391687F88AD3D9 /* ZSYMaskView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ZSYMaskView.podspec; path = ../ZSYMaskView.podspec; sourceTree = "<group>"; };
+		751AC665DF01D18897C838C5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		925352F943E9E5CE13581393 /* Pods_ZSYMaskView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZSYMaskView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC7E6DCC97D294F8A51E30C8 /* Pods-ZSYMaskView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZSYMaskView_Example.release.xcconfig"; path = "Target Support Files/Pods-ZSYMaskView_Example/Pods-ZSYMaskView_Example.release.xcconfig"; sourceTree = "<group>"; };
-		BE9B1F2B17B51D674A10882F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		BE9B1F2B17B51D674A10882F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		C2FD58E94B0DA1331E2AD724 /* Pods-ZSYMaskView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZSYMaskView_Tests.release.xcconfig"; path = "Target Support Files/Pods-ZSYMaskView_Tests/Pods-ZSYMaskView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C5E791108BE7BEC0232DFD12 /* Pods-ZSYMaskView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZSYMaskView_Tests.debug.xcconfig"; path = "Target Support Files/Pods-ZSYMaskView_Tests/Pods-ZSYMaskView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		FDD162F1CDB8D0489FDD3B07 /* Pods_ZSYMaskView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZSYMaskView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,7 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C797E7779085DC1C243C939 /* Pods_ZSYMaskView_Example.framework in Frameworks */,
+				3BA09DED24B71BE2007B7C1C /* Pods_ZSYMaskView_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,7 +79,6 @@
 				C5E791108BE7BEC0232DFD12 /* Pods-ZSYMaskView_Tests.debug.xcconfig */,
 				C2FD58E94B0DA1331E2AD724 /* Pods-ZSYMaskView_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -107,6 +108,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				3B6B517424B719E2009219DF /* TestViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -213,6 +215,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 5B974QYD5M;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
@@ -227,6 +230,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -332,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				3B6B517524B719E2009219DF /* TestViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,7 +424,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -465,7 +470,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -478,10 +483,12 @@
 			baseConfigurationReference = 180FD65F776FF406102E4906 /* Pods-ZSYMaskView_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5B974QYD5M;
 				INFOPLIST_FILE = ZSYMaskView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zsy.maskview;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
@@ -493,10 +500,12 @@
 			baseConfigurationReference = BC7E6DCC97D294F8A51E30C8 /* Pods-ZSYMaskView_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5B974QYD5M;
 				INFOPLIST_FILE = ZSYMaskView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zsy.maskview;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
