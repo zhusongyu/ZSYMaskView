@@ -29,7 +29,7 @@ class TestViewController: ZSYMaskViewController {
                 }
                 if itemIndex == 1 {
                     let label = UILabel(frame: CGRect(x: item.origin.x + 30, y: item.origin.y + 60, width: 100, height: 20))
-                    label.text = "这是cell"
+                    label.text = "这是cell1"
                     label.textColor = UIColor.orange
                     view.addSubview(label)
                 }
@@ -42,14 +42,8 @@ class TestViewController: ZSYMaskViewController {
             }
             frame?.enumerated().forEach({ itemIndex, item in
                 if itemIndex == 0 {
-                    let label = UILabel(frame: CGRect(x: item.origin.x - 60, y: item.origin.y + 50, width: 100, height: 20))
-                    label.text = "这是按钮"
-                    label.textColor = UIColor.white
-                    view.addSubview(label)
-                }
-                if itemIndex == 1 {
                     let label = UILabel(frame: CGRect(x: item.origin.x + 30, y: item.origin.y + 60, width: 100, height: 20))
-                    label.text = "这是cell"
+                    label.text = "这是cell2"
                     label.textColor = UIColor.orange
                     view.addSubview(label)
                 }

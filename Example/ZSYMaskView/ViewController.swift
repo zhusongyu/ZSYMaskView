@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         let frame1 = tableView.convert(cell1!.frame, to: view)
         let cell2 = self.tableView.cellForRow(at: IndexPath(row: 2, section: 0))
         let frame2 = self.tableView.convert(cell2!.frame, to: self.view)
-        vc.maskFrame = [0: [button.frame, frame1], 1: [button.frame, frame2]]
+        vc.maskFrame = [0: [button.frame, frame1], 1: [frame2]]
         present(vc, animated: false, completion: nil)
     }
 }
