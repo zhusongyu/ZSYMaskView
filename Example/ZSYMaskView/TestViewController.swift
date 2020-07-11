@@ -17,6 +17,7 @@ class TestViewController: ZSYMaskViewController {
         // Do any additional setup after loading the view.
     }
     
+    ///自定义遮罩层VC，根据自己传入的maskFrame来约束布局
     override func reloadViews(index: Int) {
         let frame = maskFrame[index]
         if index == 0 {
@@ -49,18 +50,5 @@ class TestViewController: ZSYMaskViewController {
                 }
             })
         }
-        
-
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
