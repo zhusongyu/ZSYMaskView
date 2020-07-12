@@ -2,7 +2,7 @@
 //  TestViewController.swift
 //  MaskDemo
 //
-//  Created by 朱宋宇 on 2020/7/9.
+//  Created by Pigpig on 2020/7/9.
 //  Copyright © 2020 zsy. All rights reserved.
 //
 
@@ -14,7 +14,7 @@ open class ZSYMaskViewController: UIViewController {
     public var maskColor: UIColor = UIColor(red: 0/255.0, green: 0/255.0, blue: 0/255.0, alpha: 0.5)
     public var cornerRadius: CGFloat = 0
     public var touchShouldDismiss: Bool = true
-    public var dissmissCallback: (() -> Void)?
+    public var dismissCallback: (() -> Void)?
     var path: UIBezierPath!
     var shapeLayer = CAShapeLayer()
     var index: Int = 0
@@ -60,7 +60,10 @@ open class ZSYMaskViewController: UIViewController {
             self.index += 1
             self.updatePath()
             self.reloadViews(index: self.index)
-        } else {
+            return
+        }
+        if touchShouldDismiss {
+            dismissCallback?()
             dismiss(animated: true, completion: nil)
         }
     }

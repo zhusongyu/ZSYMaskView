@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  ZSYMaskView
 //
-//  Created by zhusongyu1990@163.com on 07/09/2020.
+//  Created by Pigpig on 07/09/2020.
 //  Copyright (c) 2020 zhusongyu1990@163.com. All rights reserved.
 //
 
