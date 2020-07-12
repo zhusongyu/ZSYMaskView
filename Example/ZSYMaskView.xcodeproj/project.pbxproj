@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2125EC9AA18F6311F4B580D5 /* Pods_ZSYMaskView_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDD162F1CDB8D0489FDD3B07 /* Pods_ZSYMaskView_Tests.framework */; };
 		3B6B517524B719E2009219DF /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6B517424B719E2009219DF /* TestViewController.swift */; };
+		3B765DD024BABB2300DFA4B8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B765DCF24BABB2300DFA4B8 /* Info.plist */; };
 		3BA09DED24B71BE2007B7C1C /* Pods_ZSYMaskView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925352F943E9E5CE13581393 /* Pods_ZSYMaskView_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		180FD65F776FF406102E4906 /* Pods-ZSYMaskView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZSYMaskView_Example.debug.xcconfig"; path = "Target Support Files/Pods-ZSYMaskView_Example/Pods-ZSYMaskView_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		3B6B517424B719E2009219DF /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		3B765DCF24BABB2300DFA4B8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* ZSYMaskView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZSYMaskView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				3B765DCF24BABB2300DFA4B8 /* Info.plist */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = "Example for ZSYMaskView";
@@ -250,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B765DD024BABB2300DFA4B8 /* Info.plist in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
