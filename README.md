@@ -5,7 +5,7 @@
 ## 示例
 ![Demo~](https://raw.githubusercontent.com/zhusongyu/ZSYMaskView/master/Example/images/zsymaskview.gif)
 
-[![CI Status](https://img.shields.io/travis/zhusongyu1990@163.com/ZSYMaskView.svg?style=flat)](https://travis-ci.org/zhusongyu1990@163.com/ZSYMaskView)
+[![Build Status](https://travis-ci.org/zhusongyu/ZSYMaskView.svg?branch=master)](https://travis-ci.org/zhusongyu/ZSYMaskView)
 [![Version](https://img.shields.io/cocoapods/v/ZSYMaskView.svg?style=flat)](https://cocoapods.org/pods/ZSYMaskView)
 [![License](https://img.shields.io/cocoapods/l/ZSYMaskView.svg?style=flat)](https://cocoapods.org/pods/ZSYMaskView)
 [![Platform](https://img.shields.io/cocoapods/p/ZSYMaskView.svg?style=flat)](https://cocoapods.org/pods/ZSYMaskView)
