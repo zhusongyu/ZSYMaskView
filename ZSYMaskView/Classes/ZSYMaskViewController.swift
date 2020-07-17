@@ -37,12 +37,6 @@ open class ZSYMaskViewController: UIViewController, UITableViewDelegate {
      点击之后的callback，把当前index回传
      */
     public var touchCallback: ((Int) -> Void)?
-    
-    /*
-     pages可以为空，为空的情况下会根据maskFrame.key.count来判断有几步遮罩
-     需要设值的场景：TableView中需要遮罩的View还未渲染，需要传pages，以防根据maskFrame.key.count判断的时候，提前dismiss
-     */
-    public var pages: Int?
 
     /*
      在ScrollView上做遮罩，最好把ScrollView传进来。
