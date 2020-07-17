@@ -8,8 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		2125EC9AA18F6311F4B580D5 /* Pods_ZSYMaskView_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDD162F1CDB8D0489FDD3B07 /* Pods_ZSYMaskView_Tests.framework */; };
-		3B6B517524B719E2009219DF /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6B517424B719E2009219DF /* TestViewController.swift */; };
+		3B95E8D024BFF8EA009EEC43 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B95E8CE24BFF8EA009EEC43 /* CustomTableViewCell.swift */; };
+		3B95E8D124BFF8EA009EEC43 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B95E8CF24BFF8EA009EEC43 /* CustomTableViewCell.xib */; };
+		3B95E8D324BFF97F009EEC43 /* CustomCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B95E8D224BFF97F009EEC43 /* CustomCellView.swift */; };
+		3B95E8D524BFF98B009EEC43 /* CustomCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B95E8D424BFF98B009EEC43 /* CustomCellView.xib */; };
 		3BA09DED24B71BE2007B7C1C /* Pods_ZSYMaskView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925352F943E9E5CE13581393 /* Pods_ZSYMaskView_Example.framework */; };
+		3BDB892D24C14C6100DFCE34 /* ZSYScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDB892C24C14C6100DFCE34 /* ZSYScrollViewController.swift */; };
+		3BDB892F24C14DF700DFCE34 /* ZSYTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDB892E24C14DF700DFCE34 /* ZSYTableViewController.swift */; };
+		3BDB893124C154C600DFCE34 /* ZSYStaticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDB893024C154C600DFCE34 /* ZSYStaticViewController.swift */; };
+		3BDB893324C1584F00DFCE34 /* MaskForStaticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDB893224C1584F00DFCE34 /* MaskForStaticViewController.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -30,7 +37,14 @@
 
 /* Begin PBXFileReference section */
 		180FD65F776FF406102E4906 /* Pods-ZSYMaskView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZSYMaskView_Example.debug.xcconfig"; path = "Target Support Files/Pods-ZSYMaskView_Example/Pods-ZSYMaskView_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		3B6B517424B719E2009219DF /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		3B95E8CE24BFF8EA009EEC43 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		3B95E8CF24BFF8EA009EEC43 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		3B95E8D224BFF97F009EEC43 /* CustomCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellView.swift; sourceTree = "<group>"; };
+		3B95E8D424BFF98B009EEC43 /* CustomCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCellView.xib; sourceTree = "<group>"; };
+		3BDB892C24C14C6100DFCE34 /* ZSYScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZSYScrollViewController.swift; sourceTree = "<group>"; };
+		3BDB892E24C14DF700DFCE34 /* ZSYTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZSYTableViewController.swift; sourceTree = "<group>"; };
+		3BDB893024C154C600DFCE34 /* ZSYStaticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZSYStaticViewController.swift; sourceTree = "<group>"; };
+		3BDB893224C1584F00DFCE34 /* MaskForStaticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskForStaticViewController.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* ZSYMaskView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZSYMaskView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,7 +122,14 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				3B6B517424B719E2009219DF /* TestViewController.swift */,
+				3BDB893024C154C600DFCE34 /* ZSYStaticViewController.swift */,
+				3BDB893224C1584F00DFCE34 /* MaskForStaticViewController.swift */,
+				3BDB892C24C14C6100DFCE34 /* ZSYScrollViewController.swift */,
+				3BDB892E24C14DF700DFCE34 /* ZSYTableViewController.swift */,
+				3B95E8CE24BFF8EA009EEC43 /* CustomTableViewCell.swift */,
+				3B95E8CF24BFF8EA009EEC43 /* CustomTableViewCell.xib */,
+				3B95E8D224BFF97F009EEC43 /* CustomCellView.swift */,
+				3B95E8D424BFF98B009EEC43 /* CustomCellView.xib */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -252,6 +273,8 @@
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				3B95E8D524BFF98B009EEC43 /* CustomCellView.xib in Resources */,
+				3B95E8D124BFF8EA009EEC43 /* CustomTableViewCell.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,8 +358,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BDB892F24C14DF700DFCE34 /* ZSYTableViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
-				3B6B517524B719E2009219DF /* TestViewController.swift in Sources */,
+				3BDB893124C154C600DFCE34 /* ZSYStaticViewController.swift in Sources */,
+				3BDB892D24C14C6100DFCE34 /* ZSYScrollViewController.swift in Sources */,
+				3B95E8D024BFF8EA009EEC43 /* CustomTableViewCell.swift in Sources */,
+				3B95E8D324BFF97F009EEC43 /* CustomCellView.swift in Sources */,
+				3BDB893324C1584F00DFCE34 /* MaskForStaticViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

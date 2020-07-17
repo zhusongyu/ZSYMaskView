@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="106" id="KGk-i7-Jjw" customClass="CustomTableViewCell" customModule="ZSYMaskView_Example" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="334" height="106"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="334" height="106"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XOT-BJ-ynS" customClass="CustomCellView" customModule="ZSYMaskView_Example" customModuleProvider="target">
+                        <rect key="frame" x="111.5" y="0.0" width="111" height="106"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DJH-Vv-m9i" customClass="CustomCellView" customModule="ZSYMaskView_Example" customModuleProvider="target">
+                        <rect key="frame" x="222.5" y="0.0" width="111.5" height="106"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vz7-RQ-1by" customClass="CustomCellView" customModule="ZSYMaskView_Example" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="111.5" height="106"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="XOT-BJ-ynS" secondAttribute="bottom" id="2Ie-wF-jSy"/>
+                    <constraint firstItem="Vz7-RQ-1by" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="8Ok-hd-vNU"/>
+                    <constraint firstItem="DJH-Vv-m9i" firstAttribute="leading" secondItem="XOT-BJ-ynS" secondAttribute="trailing" id="DUR-6v-g2v"/>
+                    <constraint firstItem="XOT-BJ-ynS" firstAttribute="leading" secondItem="Vz7-RQ-1by" secondAttribute="trailing" id="GvQ-Ei-1au"/>
+                    <constraint firstAttribute="trailing" secondItem="DJH-Vv-m9i" secondAttribute="trailing" id="LjA-CB-3eF"/>
+                    <constraint firstItem="DJH-Vv-m9i" firstAttribute="width" secondItem="Vz7-RQ-1by" secondAttribute="width" id="bcW-tx-NqE"/>
+                    <constraint firstItem="XOT-BJ-ynS" firstAttribute="width" secondItem="Vz7-RQ-1by" secondAttribute="width" id="c31-xJ-drj"/>
+                    <constraint firstItem="DJH-Vv-m9i" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="dyU-4r-QXV"/>
+                    <constraint firstItem="Vz7-RQ-1by" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="fCX-Wb-cBT"/>
+                    <constraint firstAttribute="bottom" secondItem="Vz7-RQ-1by" secondAttribute="bottom" id="mOu-rB-DqZ"/>
+                    <constraint firstItem="XOT-BJ-ynS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="sDj-OK-uDr"/>
+                    <constraint firstAttribute="bottom" secondItem="DJH-Vv-m9i" secondAttribute="bottom" id="yAd-ji-DSo"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="cellView1" destination="Vz7-RQ-1by" id="Pj4-tu-P0U"/>
+                <outlet property="cellView2" destination="XOT-BJ-ynS" id="2bA-qK-Dbu"/>
+                <outlet property="cellView3" destination="DJH-Vv-m9i" id="BpA-O5-583"/>
+            </connections>
+            <point key="canvasLocation" x="140.57971014492756" y="173.4375"/>
+        </tableViewCell>
+    </objects>
+</document>

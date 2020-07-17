@@ -22,28 +22,30 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ```swift
 import ZSYMaskView
 
-class TestViewController: ZSYMaskViewController {
+class MaskForStaticViewController: ZSYMaskViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
-    ///自定义遮罩层VC，根据自己传入的maskFrame来约束布局
+    /*
+     自定义遮罩层VC，根据自己传入的maskFrame来约束布局，
+     放心，如果传的是maskView，库会帮你转成maskFrame，所以此处用maskFrame即可
+     */
     override func reloadViews(index: Int) {
         let frame = maskFrame[index]
         if index == 0 {
             frame?.enumerated().forEach({ itemIndex, item in
                 if itemIndex == 0 {
-                    let label = UILabel(frame: CGRect(x: item.origin.x - 30, y: item.origin.y + 50, width: 100, height: 20))
-                    label.text = "这是按钮"
-                    label.textColor = UIColor.white
+                    let label = UILabel(frame: CGRect(x: item.origin.x + 20, y: item.origin.y + 210, width: 100, height: 20))
+                    label.text = "绿色View"
+                    label.textColor = UIColor.green
                     view.addSubview(label)
                 }
                 if itemIndex == 1 {
-                    let label = UILabel(frame: CGRect(x: item.origin.x + 30, y: item.origin.y + 60, width: 100, height: 20))
-                    label.text = "这是cell1"
+                    let label = UILabel(frame: CGRect(x: item.origin.x, y: item.origin.y + 150, width: 100, height: 20))
+                    label.text = "黄色View"
                     label.textColor = UIColor.orange
                     view.addSubview(label)
                 }
@@ -56,9 +58,9 @@ class TestViewController: ZSYMaskViewController {
             }
             frame?.enumerated().forEach({ itemIndex, item in
                 if itemIndex == 0 {
-                    let label = UILabel(frame: CGRect(x: item.origin.x + 30, y: item.origin.y + 60, width: 100, height: 20))
-                    label.text = "这是cell2"
-                    label.textColor = UIColor.orange
+                    let label = UILabel(frame: CGRect(x: item.origin.x + 30, y: item.origin.y + 150, width: 100, height: 20))
+                    label.text = "紫色View"
+                    label.textColor = UIColor.purple
                     view.addSubview(label)
                 }
             })
@@ -66,48 +68,63 @@ class TestViewController: ZSYMaskViewController {
     }
 }
 
+
 ```
 
-底层VC，用来呼出遮罩层VC，并传入相应的maskFrame，负责遮罩frame的提取和present遮罩VC
+静态页面如何使用，传View即可
 ```swift
 import UIKit
 
-///底层VC
-class ViewController: UIViewController {
-    @IBOutlet weak var button: UIButton!
-    @IBOutlet weak var tableView: UITableView!
+class ZSYStaticViewController: UIViewController {
+    @IBOutlet weak var greenView: UIView!
+    @IBOutlet weak var blueView: UIView!
+    @IBOutlet weak var orangeView: UIView!
+    @IBOutlet weak var purpleView: UIView!
     
-    let array = ["line1", "line2", "line3", "line4", "line5", "line6", "line7", "line8", "line9", "line10"]
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = UIColor.orange
 
-        tableView.rowHeight = 50
-        // Do any additional setup after loading the view.
-    }
-
-    @IBAction func buttonClick(_ sender: Any) {
-        let vc = TestViewController()
-        let cell1 = tableView.cellForRow(at: IndexPath(row: 1, section: 0))
-        let frame1 = tableView.convert(cell1!.frame, to: view)
-        let cell2 = self.tableView.cellForRow(at: IndexPath(row: 2, section: 0))
-        let frame2 = self.tableView.convert(cell2!.frame, to: self.view)
-        vc.maskFrame = [0: [button.frame, frame1], 1: [frame2]]
-        present(vc, animated: false, completion: nil)
+        let vc = MaskForStaticViewController()
+        vc.maskView = [0: [greenView, orangeView], 1: [purpleView]]
+        present(vc, animated: true, completion: nil)
     }
 }
-extension ViewController: UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return array.count
-    }
+
+```
+
+ScrollView如何使用，传View的同时，把ScrollView也传过去。这样如果需要遮罩的View在屏幕以外也不用担心啦，因为库已经帮你做好啦
+```swift
+import UIKit
+import ZSYMaskView
+
+class ZSYScrollViewController: UIViewController {
+
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var greenView: UIView!
+    @IBOutlet weak var yellowView: UIView!
+    @IBOutlet weak var blueView: UIView!
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell.init(style: UITableViewCell.CellStyle.default, reuseIdentifier: "CellIdentifier")
-        cell.textLabel?.text = array[indexPath.row]
-        
-        return cell
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        let vc = ZSYMaskViewController()
+        vc.maskView = [0: [greenView], 1: [blueView], 2: [yellowView]]
+        vc.scrollView = scrollView
+        present(vc, animated: true, completion: nil)
     }
+}
+
+```
+
+TableView如何使用，传View的同时，还需要传TableView、invisibleIndexPath(不可见的IndexPath，即还未渲染出来，你还不能拿到的Cell的IndexPath)，
+```swift
+let vc = ZSYMaskViewController()
+if let cellView = tableView.cellForRow(at: IndexPath(row: 3, section: 0)) as? CustomTableViewCell {
+    vc.maskView = [0: [sender], 1: [tableView.cellForRow(at: IndexPath(row: 1, section: 0))!], 2: [cellView.cellView2]]
+    vc.invisibleIndexPath = [3: IndexPath(row: 7, section: 0)]
+    vc.tableView = tableView
+    vc.maskInsets = [3: [UIEdgeInsets(top: 0, left: 100, bottom: 0, right: 100)]]
+    present(vc, animated: true, completion: nil)
 }
 
 ```
