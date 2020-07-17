@@ -1,14 +1,23 @@
 # ZSYMaskView
-
-一个自定义程度极高的遮罩引导页。
-
-## 示例
-![Demo~](https://raw.githubusercontent.com/zhusongyu/ZSYMaskView/master/Example/images/zsymaskview.gif)
-
 [![Build Status](https://travis-ci.org/zhusongyu/ZSYMaskView.svg?branch=master)](https://travis-ci.org/zhusongyu/ZSYMaskView)
 [![Version](https://img.shields.io/cocoapods/v/ZSYMaskView.svg?style=flat)](https://cocoapods.org/pods/ZSYMaskView)
 [![License](https://img.shields.io/cocoapods/l/ZSYMaskView.svg?style=flat)](https://cocoapods.org/pods/ZSYMaskView)
 [![Platform](https://img.shields.io/cocoapods/p/ZSYMaskView.svg?style=flat)](https://cocoapods.org/pods/ZSYMaskView)
+
+一个自定义程度极高的遮罩引导页。
+
+
+## 示例
+
+静态页面
+![Demo~](https://raw.githubusercontent.com/zhusongyu/ZSYMaskView/master/Example/images/staticview.gif)
+
+UIScrollView
+![Demo~](https://raw.githubusercontent.com/zhusongyu/ZSYMaskView/master/Example/images/scrollview.gif)
+
+UITableView
+![Demo~](https://raw.githubusercontent.com/zhusongyu/ZSYMaskView/master/Example/images/tableview.gif)
+
 
 ## Example
 
