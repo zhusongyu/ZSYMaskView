@@ -12,12 +12,69 @@
 ### 静态页面
 ![Demo~](https://raw.githubusercontent.com/zhusongyu/ZSYMaskView/master/Example/images/staticview.gif)
 
+静态页面如何使用，传View即可
+```swift
+import UIKit
+
+class ZSYStaticViewController: UIViewController {
+    @IBOutlet weak var greenView: UIView!
+    @IBOutlet weak var blueView: UIView!
+    @IBOutlet weak var orangeView: UIView!
+    @IBOutlet weak var purpleView: UIView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        let vc = MaskForStaticViewController()
+        vc.maskView = [0: [greenView, orangeView], 1: [purpleView]]
+        present(vc, animated: true, completion: nil)
+    }
+}
+
+```
+
 ### UIScrollView
 ![Demo~](https://raw.githubusercontent.com/zhusongyu/ZSYMaskView/master/Example/images/scrollview.gif)
+
+ScrollView如何使用，传View的同时，把ScrollView也传过去。这样如果需要遮罩的View在屏幕以外也不用担心啦，因为库已经帮你做好啦
+```swift
+import UIKit
+import ZSYMaskView
+
+class ZSYScrollViewController: UIViewController {
+
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var greenView: UIView!
+    @IBOutlet weak var yellowView: UIView!
+    @IBOutlet weak var blueView: UIView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        let vc = ZSYMaskViewController()
+        vc.maskView = [0: [greenView], 1: [blueView], 2: [yellowView]]
+        vc.scrollView = scrollView
+        present(vc, animated: true, completion: nil)
+    }
+}
+
+```
 
 ### UITableView
 ![Demo~](https://raw.githubusercontent.com/zhusongyu/ZSYMaskView/master/Example/images/tableview.gif)
 
+TableView如何使用，传View的同时，还需要传TableView、invisibleIndexPath(不可见的IndexPath，即还未渲染出来，你还不能拿到的Cell的IndexPath)，
+```swift
+let vc = ZSYMaskViewController()
+if let cellView = tableView.cellForRow(at: IndexPath(row: 3, section: 0)) as? CustomTableViewCell {
+    vc.maskView = [0: [sender], 1: [tableView.cellForRow(at: IndexPath(row: 1, section: 0))!], 2: [cellView.cellView2]]
+    vc.invisibleIndexPath = [3: IndexPath(row: 7, section: 0)]
+    vc.tableView = tableView
+    vc.maskInsets = [3: [UIEdgeInsets(top: 0, left: 100, bottom: 0, right: 100)]]
+    present(vc, animated: true, completion: nil)
+}
+
+```
 
 ## Example
 
@@ -77,64 +134,6 @@ class MaskForStaticViewController: ZSYMaskViewController {
     }
 }
 
-
-```
-
-静态页面如何使用，传View即可
-```swift
-import UIKit
-
-class ZSYStaticViewController: UIViewController {
-    @IBOutlet weak var greenView: UIView!
-    @IBOutlet weak var blueView: UIView!
-    @IBOutlet weak var orangeView: UIView!
-    @IBOutlet weak var purpleView: UIView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        let vc = MaskForStaticViewController()
-        vc.maskView = [0: [greenView, orangeView], 1: [purpleView]]
-        present(vc, animated: true, completion: nil)
-    }
-}
-
-```
-
-ScrollView如何使用，传View的同时，把ScrollView也传过去。这样如果需要遮罩的View在屏幕以外也不用担心啦，因为库已经帮你做好啦
-```swift
-import UIKit
-import ZSYMaskView
-
-class ZSYScrollViewController: UIViewController {
-
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var greenView: UIView!
-    @IBOutlet weak var yellowView: UIView!
-    @IBOutlet weak var blueView: UIView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        let vc = ZSYMaskViewController()
-        vc.maskView = [0: [greenView], 1: [blueView], 2: [yellowView]]
-        vc.scrollView = scrollView
-        present(vc, animated: true, completion: nil)
-    }
-}
-
-```
-
-TableView如何使用，传View的同时，还需要传TableView、invisibleIndexPath(不可见的IndexPath，即还未渲染出来，你还不能拿到的Cell的IndexPath)，
-```swift
-let vc = ZSYMaskViewController()
-if let cellView = tableView.cellForRow(at: IndexPath(row: 3, section: 0)) as? CustomTableViewCell {
-    vc.maskView = [0: [sender], 1: [tableView.cellForRow(at: IndexPath(row: 1, section: 0))!], 2: [cellView.cellView2]]
-    vc.invisibleIndexPath = [3: IndexPath(row: 7, section: 0)]
-    vc.tableView = tableView
-    vc.maskInsets = [3: [UIEdgeInsets(top: 0, left: 100, bottom: 0, right: 100)]]
-    present(vc, animated: true, completion: nil)
-}
 
 ```
 
