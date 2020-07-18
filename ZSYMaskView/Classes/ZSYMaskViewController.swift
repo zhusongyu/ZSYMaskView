@@ -102,9 +102,12 @@ open class ZSYMaskViewController: UIViewController, UITableViewDelegate {
 
         guard let frame = maskFrame[index] else { return }
         frame.enumerated().forEach { indexFrame, rect in
+            ///对ScrollView的特殊处理
             if let scrollView = scrollView, rect.origin.y + rect.height > view.bounds.height {
                 scrollView.scrollRectToVisible(rect, animated: true)
             }
+            
+            ///处理上下左右边距
             var newRect = rect
             let maskInset = maskInsets[index]
             newRect.origin.x += maskInset?[indexFrame].left ?? 0
@@ -146,6 +149,7 @@ open class ZSYMaskViewController: UIViewController, UITableViewDelegate {
 
         if numbers > self.index {
             self.index += 1
+            ///TableView的特殊处理
             if let indexPath = invisibleIndexPath[index], let tempTableView = tableView {
                 tempTableView.scrollToRow(at: indexPath, at: .middle, animated: true)
             } else {
@@ -163,6 +167,7 @@ open class ZSYMaskViewController: UIViewController, UITableViewDelegate {
 
 extension ZSYMaskViewController: UIScrollViewDelegate {
     public func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+        ///对TableView的特殊处理
         if let indexPath = invisibleIndexPath[index], let tempTableView = tableView {
             maskView[index] = [tempTableView.cellForRow(at: indexPath)!]
         }
