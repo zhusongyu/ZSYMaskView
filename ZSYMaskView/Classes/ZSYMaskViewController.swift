@@ -136,6 +136,13 @@ open class ZSYMaskViewController: UIViewController, UITableViewDelegate {
     }
     
     public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if !touchShouldDismiss {
+            return
+        }
+        nextStep()
+    }
+    
+    public func nextStep() {
         var numbers = maskFrame.keys.count - 1
         if invisibleIndexPath.keys.count > 0 {
             var maxKey = 0
@@ -158,10 +165,8 @@ open class ZSYMaskViewController: UIViewController, UITableViewDelegate {
             touchCallback?(index)
             return
         }
-        if touchShouldDismiss {
-            dismissCallback?()
-            dismiss(animated: true, completion: nil)
-        }
+        dismissCallback?()
+        dismiss(animated: true, completion: nil)
     }
 }
 
