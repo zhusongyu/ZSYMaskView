@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ZSYMaskView'
-  s.version          = '0.0.4'
+  s.version          = '0.0.5'
   s.summary          = '可以自定义的MaskView.'
 
 # This description is used to generate tags and improve search results.
